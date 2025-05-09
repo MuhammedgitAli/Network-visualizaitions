@@ -1,0 +1,15 @@
+{
+  "name": "data-pipeline-prototype",
+  "version": "1.0.0",
+  "description": "Real-time data pipeline prototype demonstrating edge vs cloud trade-offs",
+  "main": "kafka_pubsub.js",
+  "scripts": {
+    "start:edge": "node edge_server.js",
+    "start:cloud": "node cloud_server.js",
+    "start:kafka": "node kafka_pubsub.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "kafkajs": "^2.2.4"
+  }
+} 

@@ -1,0 +1,25 @@
+
+    graph TD
+        %% Flat CDN Topology
+        subgraph CDN["Flat CDN Topology"]
+            Client1[Client 1] --> CDN1[CDN Edge 1]
+            Client2[Client 2] --> CDN2[CDN Edge 2]
+            Client3[Client 3] --> CDN3[CDN Edge 3]
+            CDN1 --> Origin[Origin Server]
+            CDN2 --> Origin
+            CDN3 --> Origin
+        end
+        
+        %% Hybrid P2P/CDN Topology
+        subgraph Hybrid["Hybrid P2P/CDN Topology"]
+            C1[Client 1] --> E1[Edge 1]
+            C2[Client 2] --> E2[Edge 2]
+            C3[Client 3] --> E3[Edge 3]
+            E1 <--> E2
+            E2 <--> E3
+            E1 <--> E3
+            E1 --> O[Origin]
+            E2 --> O
+            E3 --> O
+        end
+    
